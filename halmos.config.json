@@ -1,0 +1,6 @@
+{
+  "configVersion": "0.0",
+  "sources":
+    [ "app/Main.lhs"
+    ]
+}

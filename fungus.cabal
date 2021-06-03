@@ -1,0 +1,82 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f49aac148ece875518dc8c4e40ffbbaa0a6cea321124ba81dd8b2b9c7a623206
+
+name:           fungus
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/nbloomf/fungus#readme>
+homepage:       https://github.com/nbloomf/fungus#readme
+bug-reports:    https://github.com/nbloomf/fungus/issues
+author:         Nathan Bloomfield
+maintainer:     nbloomf@gmail.com
+copyright:      Automattic, Inc
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/nbloomf/fungus
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_fungus
+  hs-source-dirs:
+      src
+  default-extensions: LambdaCase InstanceSigs BangPatterns TypeApplications OverloadedStrings ScopedTypeVariables AllowAmbiguousTypes
+  build-depends:
+      QuickCheck >=2.14.2
+    , base >=4.7 && <5
+    , containers >=0.6.2.1
+    , doctest >=0.16.0.1
+    , parsec >=3.1.14.0
+    , text >=1.2.4.1
+  default-language: Haskell2010
+
+executable fungus-exe
+  main-is: Main.lhs
+  other-modules:
+      Paths_fungus
+  hs-source-dirs:
+      app
+  default-extensions: LambdaCase InstanceSigs BangPatterns TypeApplications OverloadedStrings ScopedTypeVariables AllowAmbiguousTypes
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck >=2.14.2
+    , base >=4.7 && <5
+    , containers >=0.6.2.1
+    , doctest >=0.16.0.1
+    , fungus
+    , parsec >=3.1.14.0
+    , text >=1.2.4.1
+  default-language: Haskell2010
+
+test-suite fungus-test
+  type: exitcode-stdio-1.0
+  main-is: Test.lhs
+  other-modules:
+      Paths_fungus
+  hs-source-dirs:
+      test
+  default-extensions: LambdaCase InstanceSigs BangPatterns TypeApplications OverloadedStrings ScopedTypeVariables AllowAmbiguousTypes
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck >=2.14.2
+    , base >=4.7 && <5
+    , containers >=0.6.2.1
+    , doctest >=0.16.0.1
+    , fungus
+    , parsec >=3.1.14.0
+    , tasty >=1.0.1.1
+    , tasty-quickcheck >=0.10.1.1
+    , text >=1.2.4.1
+  default-language: Haskell2010

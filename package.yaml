@@ -1,0 +1,61 @@
+name:                fungus
+version:             0.1.0.0
+github:              "nbloomf/fungus"
+license:             BSD3
+author:              "Nathan Bloomfield"
+maintainer:          "nbloomf@gmail.com"
+copyright:           "Automattic, Inc"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+description:         Please see the README on GitHub at <https://github.com/nbloomf/fungus#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers >= 0.6.2.1
+- doctest >= 0.16.0.1
+- parsec >= 3.1.14.0
+- QuickCheck >= 2.14.2
+- text >= 1.2.4.1
+
+default-extensions:
+  LambdaCase
+  InstanceSigs
+  BangPatterns
+  TypeApplications
+  OverloadedStrings
+  ScopedTypeVariables
+  AllowAmbiguousTypes
+
+library:
+  source-dirs: src
+
+executables:
+  fungus-exe:
+    main:                Main.lhs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - fungus
+
+tests:
+  fungus-test:
+    main:                Test.lhs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - fungus
+    - tasty >=1.0.1.1
+    - tasty-quickcheck >=0.10.1.1
