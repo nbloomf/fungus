@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f49aac148ece875518dc8c4e40ffbbaa0a6cea321124ba81dd8b2b9c7a623206
+-- hash: f1d3dac6d052ff6c5ec24309f7c49e636fc4e0cc8852af08260f0d0e2c3d1c99
 
 name:           fungus
 version:        0.1.0.0
@@ -27,7 +27,9 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Fungus
+      Fungus.LambdaTerm
+      Fungus.ParserUtils
   other-modules:
       Paths_fungus
   hs-source-dirs:
