@@ -2,5 +2,7 @@
   "configVersion": "0.0",
   "sources":
     [ "app/Main.lhs"
+    , "src/Fungus/LambdaTerm.lhs"
+    , "bibliography.md"
     ]
 }
